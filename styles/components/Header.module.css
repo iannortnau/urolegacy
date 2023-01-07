@@ -1,8 +1,8 @@
 .body{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     width: 100vw;
-    height: 50px;
+    height: 43px;
     background-color: #202542;
     border-bottom-style: solid;
     border-bottom-width: 5px;

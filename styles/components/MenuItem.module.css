@@ -1,0 +1,15 @@
+.body{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    width: 295px;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: #957d63;
+}
+
+.title{
+    color: #947c62;
+    font-size: 20px;
+}

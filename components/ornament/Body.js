@@ -12,6 +12,9 @@ export default function Body(props){
             <div className={styles.content}>
                 <Header/>
             </div>
+            <div className={styles.main}>
+                {props.children}
+            </div>
             <Image
                 className={styles.img1}
                 src={bgImage1}

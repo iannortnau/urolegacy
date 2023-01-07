@@ -6,7 +6,11 @@ import img from "../../public/UroLegacyPin.png"
 export default function Pin(props){
     return (
         <div className={styles.body}>
-            <Image src={img} alt={"Pin"}/>
+            <Image
+                src={img}
+                alt={"Pin"}
+                width={50}
+            />
         </div>
     );
 }
