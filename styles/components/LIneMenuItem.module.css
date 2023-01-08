@@ -1,0 +1,14 @@
+.body{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.title{
+    color: #947c62;
+    font-size: 16px;
+}

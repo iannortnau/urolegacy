@@ -2,7 +2,7 @@ import styles from "../../styles/components/Menu.module.css";
 import Image from "next/image";
 import imgMenu from "../../public/icons8-menu-arredondado-24.png"
 import imgClose from "../../public/icons8-fechar-janela-50.png"
-import imgLogo from "../../public/UroLegacyLogoLongo.png"
+import imgLogo from "../../public/UroLegacyPin.png"
 import {useRouter} from "next/router";
 import {useState} from "react";
 import MenuItem from "./MenuItem";
@@ -11,8 +11,9 @@ import MenuItem from "./MenuItem";
 export default function Menu(props){
     const [open, setOpen] = useState(false);
 
-    if(open){
-        return (
+    return (
+        <>
+            {open&&
             <div
                 className={styles.bodyOpen}
             >
@@ -22,7 +23,6 @@ export default function Menu(props){
                     <Image
                         src={imgLogo}
                         alt={"Pin"}
-                        width={200}
                         height={40}
                     />
                     <Image
@@ -68,9 +68,7 @@ export default function Menu(props){
                     route={"/contato"}
                 />
             </div>
-        );
-    }else{
-        return (
+            }
             <div
                 className={styles.bodyClose}
                 onClick={()=>{
@@ -84,6 +82,6 @@ export default function Menu(props){
                     height={30}
                 />
             </div>
-        );
-    }
+        </>
+    );
 }

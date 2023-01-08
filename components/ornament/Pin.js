@@ -1,6 +1,6 @@
 import styles from "../../styles/components/Pin.module.css";
 import Image from "next/image";
-import img from "../../public/UroLegacyPin.png"
+import img from "../../public/UroLegacyLogoLongo.png"
 
 
 export default function Pin(props){
@@ -9,7 +9,7 @@ export default function Pin(props){
             <Image
                 src={img}
                 alt={"Pin"}
-                width={50}
+                width={200}
             />
         </div>
     );
