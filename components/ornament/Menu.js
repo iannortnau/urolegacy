@@ -1,20 +1,32 @@
 import styles from "../../styles/components/Menu.module.css";
 import Image from "next/image";
 import imgMenu from "../../public/icons8-menu-arredondado-24.png"
-import imgClose from "../../public/icons8-fechar-janela-50.png"
 import imgLogo from "../../public/UroLegacyPin.png"
-import {useRouter} from "next/router";
-import {useState} from "react";
+import {useContext, useEffect, useRef, useState} from "react";
 import MenuItem from "./MenuItem";
+import {AiFillCloseSquare} from "react-icons/ai";
+import {GlobalContext} from "../../context/GlobalContext";
 
 
 export default function Menu(props){
+    const {
+        animateCSS
+    } = useContext(GlobalContext);
+    const refMenu = useRef(null);
     const [open, setOpen] = useState(false);
+
+    useEffect(() => {
+        if(open){
+            animateCSS(refMenu, "animate__slideInRight");
+        }
+    }, [open]);
+
 
     return (
         <>
             {open&&
             <div
+                ref={refMenu}
                 className={styles.bodyOpen}
             >
                 <div
@@ -23,17 +35,22 @@ export default function Menu(props){
                     <Image
                         src={imgLogo}
                         alt={"Pin"}
-                        height={40}
+                        height={36}
                     />
-                    <Image
-                        src={imgClose}
-                        alt={"Pin"}
-                        width={35}
-                        height={35}
+                    <div
                         onClick={()=>{
-                            setOpen(!open);
+                            animateCSS(refMenu, "animate__slideOutRight").then(()=>{
+                                setOpen(false);
+                            });
+
                         }}
-                    />
+
+                    >
+                        <AiFillCloseSquare
+                            size={30}
+                            color={"#856c4c"}
+                        />
+                    </div>
                 </div>
                 <MenuItem
                     title={"Home"}
@@ -72,7 +89,7 @@ export default function Menu(props){
             <div
                 className={styles.bodyClose}
                 onClick={()=>{
-                    setOpen(!open);
+                    setOpen(true);
                 }}
             >
                 <Image

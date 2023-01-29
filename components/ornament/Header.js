@@ -6,6 +6,7 @@ import {useEffect, useRef, useState} from "react";
 
 
 export default function Header(props){
+
     const [windowSize, setWindowSize] = useState(0);
 
     useEffect(() => {

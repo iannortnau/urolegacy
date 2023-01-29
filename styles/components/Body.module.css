@@ -4,6 +4,15 @@
     min-height: 100vh;
 }
 
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    width: 100vw;
+    height: 100vh;
+}
+
 .content{
     display: flex;
     position: absolute;
@@ -27,12 +36,4 @@
     height: 100%;
     opacity: 20%;
     z-index: -5;
-}
-
-.main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
 }
