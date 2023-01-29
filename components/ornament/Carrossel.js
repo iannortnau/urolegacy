@@ -19,6 +19,10 @@ export default function Carrossel(props){
         changeImage(0);
     }, []);
 
+    useEffect(()=>{
+        ref.current.style.setProperty('display', "flex");
+    },[position]);
+
     function changeImage(i){
         animateCSS(ref,"animate__fadeIn", "2s");
         if(i<data.length-1){
@@ -27,7 +31,6 @@ export default function Carrossel(props){
             i=0;
         }
         setPosition(i);
-        ref.current.style.setProperty('display', "flex");
         setTimeout(()=>{
             animateCSS(ref,"animate__fadeOut", "2s").then(()=>{
                 ref.current.style.setProperty('display', "none");
