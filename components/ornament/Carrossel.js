@@ -27,8 +27,10 @@ export default function Carrossel(props){
             i=0;
         }
         setPosition(i);
+        ref.current.style.setProperty('display', "flex");
         setTimeout(()=>{
             animateCSS(ref,"animate__fadeOut", "2s").then(()=>{
+                ref.current.style.setProperty('display', "none");
                 changeImage(i);
             });
         },8000);

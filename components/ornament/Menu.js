@@ -6,6 +6,7 @@ import {useContext, useEffect, useRef, useState} from "react";
 import MenuItem from "./MenuItem";
 import {AiFillCloseSquare} from "react-icons/ai";
 import {GlobalContext} from "../../context/GlobalContext";
+import {GiHamburgerMenu} from "react-icons/gi";
 
 
 export default function Menu(props){
@@ -93,11 +94,9 @@ export default function Menu(props){
                     setOpen(true);
                 }}
             >
-                <Image
-                    src={imgMenu}
-                    alt={"Pin"}
-                    width={35}
-                    height={30}
+                <GiHamburgerMenu
+                    size={35}
+                    color={"#947C69"}
                 />
             </div>
         </>
