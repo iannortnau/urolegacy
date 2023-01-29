@@ -40,6 +40,7 @@ export default function Menu(props){
                     <div
                         onClick={()=>{
                             animateCSS(refMenu, "animate__slideOutRight").then(()=>{
+                                refMenu.current.style.setProperty('display', "none");
                                 setOpen(false);
                             });
 
