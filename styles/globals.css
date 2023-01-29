@@ -3,7 +3,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Sora",Sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
   scale: 1;
 }
 
